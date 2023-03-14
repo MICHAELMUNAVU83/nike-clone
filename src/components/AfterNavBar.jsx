@@ -2,6 +2,8 @@ import React from "react";
 import { SiNike } from "react-icons/si";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 const AfterNavBar = () => {
   return (
     <>
@@ -72,8 +74,55 @@ const AfterNavBar = () => {
           <BiShoppingBag className="ml-4 h-[40px] text-black w-[40px] rounded-full px-2 hover:bg-gray-200 cursor-pointer " />
         </div>
       </div>
-      <div className="bg-gray-100 p-4 text-sm flex justify-between position-fixed w-full">
-        jpk
+      <div className="bg-gray-100 p-4 text-center text-sm flex justify-center w-100">
+        <Splide
+          options={{
+            perPage: 1,
+            arrows: false,
+            autoplay: true,
+            speed: 2000,
+            pagination: false,
+            type: "loop",
+            interval: 3000,
+            rewindByDrag: true,
+            gap: "100%",
+          }}
+        >
+          <SplideSlide>
+            <div className="flex  flex-col justify-center">
+              <p className="font-semibold">New Markdowns: Up to 40% Off</p>
+              <p className="underline text-sm">
+                Shop just-reduced styles—no code needed.{" "}
+              </p>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="flex  flex-col justify-center">
+              <p className="font-semibold  text-sm">
+                Free Shipping + Returns, Free Membership, Exclusive Products
+              </p>
+              <p className="underline">Join Now </p>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="flex  flex-col justify-center">
+              <p className="font-semibold">Support Students Run LA</p>
+              <p className="underline  text-sm">
+                Learn more on how to give back to Students Run LA.{" "}
+              </p>
+            </div>
+          </SplideSlide>
+
+          <SplideSlide>
+            <div className="flex  flex-col justify-center">
+              <p className="font-semibold">Why Wait? Try Store Pickup</p>
+              <p className="text-sm">
+                Buy online and find a store near you for pick up in less than 2
+                hours. <span className="underline">Shop now.</span>
+              </p>
+            </div>
+          </SplideSlide>
+        </Splide>
       </div>
     </>
   );

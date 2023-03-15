@@ -8,7 +8,7 @@ const Trending = () => {
         <img className="px-8" src={trending} alt="trending" />
         <div className="text-gray-600 flex text-md text-center flex-col  mt-4">
           <h1 className="text-5xl font-bold text-black">NIKE STYLE </h1>
-          <p className="my-4">
+          <p className="my-4 md:px-0 px-12">
             Shop Stylist Miyako Bellizi's look for a fit that works all day ,
             everyday
           </p>

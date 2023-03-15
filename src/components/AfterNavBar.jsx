@@ -7,17 +7,22 @@ import "@splidejs/react-splide/css";
 const AfterNavBar = () => {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between w-full">
         <div className="ml-12">
           <SiNike
             size={60}
             className="text-2xl mr-2 cursor-pointer hover:text-gray-500"
           />
         </div>
-        <div className="py-4 ml-56 ">
-          <ul className=" flex gap-8  font-bold">
-            <li className="hover:border-b hover:border-1 transition duration-500 ease-in-out hover:border-black cursor-pointer">
-              New & Featured
+        <div className="py-4 ml-16 md:ml-56 ">
+          <ul className=" flex md:gap-8 gap-2 text-xs md:font-bold">
+            <li className="hover:border-b gap-1 hover:border-1 flex w-[100%] leading transition duration-500 ease-in-out hover:border-black cursor-pointer">
+              <span>
+                New   </span> 
+                <span>
+                  & 
+                  </span>
+                Featured
             </li>
             <li className="hover:border-b hover:border-1 transition duration-500 ease-in-out hover:border-black cursor-pointer">
               Men{" "}
@@ -36,7 +41,7 @@ const AfterNavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="mr-12 flex py-2">
+        <div className="md:mr-12 mr-8 flex py-2">
           <form>
             <label
               for="default-search"
@@ -44,7 +49,7 @@ const AfterNavBar = () => {
             >
               Search
             </label>
-            <div class="relative">
+            <div class="relative ml-4">
               <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
@@ -70,8 +75,8 @@ const AfterNavBar = () => {
               />
             </div>
           </form>
-          <AiOutlineHeart className="ml-4 h-[40px] w-[40px] rounded-full px-2 hover:bg-gray-200 cursor-pointer " />
-          <BiShoppingBag className="ml-4 h-[40px] text-black w-[40px] rounded-full px-2 hover:bg-gray-200 cursor-pointer " />
+          <AiOutlineHeart className="ml-4 md:h-[40px] md:w-[40px] w-[30px] h-[30px] rounded-full md:px-2 px-1 hover:bg-gray-200 cursor-pointer " />
+          <BiShoppingBag className="ml-4 md:h-[40px] md:w-[40px] w-[30px] h-[30px] text-black  rounded-full md:px-2 px-1 hover:bg-gray-200 cursor-pointer " />
         </div>
       </div>
       <div className="bg-gray-100 p-4 text-center text-sm flex justify-center w-100">

@@ -2,11 +2,11 @@ import React from "react";
 
 const BeforeFooter = () => {
   return (
-    <div className="my-16 flex justify-around px-16 group">
+    <div className="my-16 flex justify-around px-8 gap-4 md:px-16 group">
       <div className="flex flex-col cursor-pointer">
-        <ul>
+        <ul className="text-sm md:text-md">
           <li className="text-2xl">Featured </li>
-          <li className="text-gray-400 cursor-pointer my-1   hover:text-black transform duration-300">
+          <li className="text-gray-400 cursor-pointer my-1    hover:text-black transform duration-300">
             AirForce 1{" "}
           </li>
           <li className="text-gray-400 cursor-pointer my-1   hover:text-black transform duration-300">
@@ -19,7 +19,7 @@ const BeforeFooter = () => {
             AirMax 270{" "}
           </li>
         </ul>
-        <ul className="hidden group-hover:block transform ease-in duration-500">
+        <ul className="hidden group-hover:block transform ease-in duration-500 text-sm md:text-md">
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             AirMax 97{" "}
           </li>
@@ -38,7 +38,7 @@ const BeforeFooter = () => {
         </ul>
       </div>
       <div className="flex flex-col">
-        <ul>
+        <ul className="text-sm md:text-md">
           <li className="text-2xl">Shoes </li>
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             All shoes
@@ -53,7 +53,7 @@ const BeforeFooter = () => {
             Basketball shoes
           </li>
         </ul>
-        <ul className="hidden group-hover:block transform ease-in duration-500">
+        <ul className="hidden group-hover:block transform ease-in duration-500 text-sm md:text-md">
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             Training shoes
           </li>
@@ -73,7 +73,7 @@ const BeforeFooter = () => {
       </div>
 
       <div className="flex flex-col">
-        <ul>
+        <ul className="text-sm md:text-md">
           <li className="text-2xl">Clothing </li>
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             All Clothing
@@ -88,7 +88,7 @@ const BeforeFooter = () => {
             Hoodies & Pullovers
           </li>
         </ul>
-        <ul className="hidden group-hover:block transform ease-in duration-500">
+        <ul className="hidden group-hover:block transform ease-in duration-500 text-sm md:text-md">
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             Joggers & Sweatpants
           </li>
@@ -122,7 +122,7 @@ const BeforeFooter = () => {
         </ul>
       </div>
       <div className="flex flex-col">
-        <ul>
+        <ul className="text-sm md:text-md">
           <li className="text-2xl">Kids' </li>
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             Infant & Toddler Shoes
@@ -137,7 +137,7 @@ const BeforeFooter = () => {
             Kids' Running Shoes
           </li>
         </ul>
-        <ul className="hidden group-hover:block transform ease-in duration-500">
+        <ul className="hidden group-hover:block transform ease-in duration-500 text-xs md:text-md">
           <li className="text-gray-400 cursor-pointer my-1  hover:text-black transform duration-300">
             Kids' Jordan Shoes
           </li>

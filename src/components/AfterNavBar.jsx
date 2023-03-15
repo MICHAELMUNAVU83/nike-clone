@@ -7,22 +7,19 @@ import "@splidejs/react-splide/css";
 const AfterNavBar = () => {
   return (
     <>
-      <div className="flex justify-between w-full">
-        <div className="ml-12">
+      <div className="flex md:flex-row flex-col justify-between">
+        <div className="md:ml-12 mx-auto">
           <SiNike
             size={60}
             className="text-2xl mr-2 cursor-pointer hover:text-gray-500"
           />
         </div>
-        <div className="py-4 ml-16 md:ml-56 ">
+        <div className="py-4 mx-auto md:ml-56 ">
           <ul className=" flex md:gap-8 gap-2 text-xs md:font-bold">
             <li className="hover:border-b gap-1 hover:border-1 flex w-[100%] leading transition duration-500 ease-in-out hover:border-black cursor-pointer">
-              <span>
-                New   </span> 
-                <span>
-                  & 
-                  </span>
-                Featured
+              <span>New </span>
+              <span>&</span>
+              Featured
             </li>
             <li className="hover:border-b hover:border-1 transition duration-500 ease-in-out hover:border-black cursor-pointer">
               Men{" "}
@@ -41,7 +38,7 @@ const AfterNavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="md:mr-12 mr-8 flex py-2">
+        <div className="md:mr-12 mx-auto flex py-2">
           <form>
             <label
               for="default-search"
@@ -79,56 +76,59 @@ const AfterNavBar = () => {
           <BiShoppingBag className="ml-4 md:h-[40px] md:w-[40px] w-[30px] h-[30px] text-black  rounded-full md:px-2 px-1 hover:bg-gray-200 cursor-pointer " />
         </div>
       </div>
-      <div className="bg-gray-100 p-4 text-center text-sm flex justify-center w-100">
-        <Splide
-          options={{
-            perPage: 1,
-            arrows: false,
-            autoplay: true,
-            speed: 2000,
-            pagination: false,
-            type: "loop",
-            interval: 3000,
-            rewindByDrag: true,
-            gap: "100%",
-          }}
-        >
-          <SplideSlide>
-            <div className="flex  flex-col justify-center">
-              <p className="font-semibold">New Markdowns: Up to 40% Off</p>
-              <p className="underline text-sm">
-                Shop just-reduced styles—no code needed.{" "}
-              </p>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="flex  flex-col justify-center">
-              <p className="font-semibold  text-sm">
-                Free Shipping + Returns, Free Membership, Exclusive Products
-              </p>
-              <p className="underline">Join Now </p>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="flex  flex-col justify-center">
-              <p className="font-semibold">Support Students Run LA</p>
-              <p className="underline  text-sm">
-                Learn more on how to give back to Students Run LA.{" "}
-              </p>
-            </div>
-          </SplideSlide>
+      {window && window.innerWidth > 768 && (
+        <div className="bg-gray-100 p-4  text-center text-sm flex justify-center w-[100%]">
+          <Splide
+            options={{
+              perPage: 1,
+              arrows: false,
+              autoplay: true,
+              speed: 2000,
+              pagination: false,
+              type: "loop",
+              interval: 3000,
+              rewindByDrag: true,
+            }}
+          >
+            <SplideSlide>
+              <div className="flex  flex-col justify-center">
+                <p className="font-semibold text-sm">
+                  New Markdowns: Up to 40% Off
+                </p>
+                <p className="underline text-sm md:text-xs">
+                  Shop just-reduced styles—no code needed.{" "}
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div className="flex  flex-col justify-center">
+                <p className="font-semibold  text-sm">
+                  Free Shipping + Returns, Free Membership, Exclusive Products
+                </p>
+                <p className="underline">Join Now </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div className="flex  flex-col justify-center">
+                <p className="font-semibold text-sm">Support Students Run LA</p>
+                <p className="underline  text-sm md:text-xs">
+                  Learn more on how to give back to Students Run LA.{" "}
+                </p>
+              </div>
+            </SplideSlide>
 
-          <SplideSlide>
-            <div className="flex  flex-col justify-center">
-              <p className="font-semibold">Why Wait? Try Store Pickup</p>
-              <p className="text-sm">
-                Buy online and find a store near you for pick up in less than 2
-                hours. <span className="underline">Shop now.</span>
-              </p>
-            </div>
-          </SplideSlide>
-        </Splide>
-      </div>
+            <SplideSlide>
+              <div className="flex  flex-col justify-center">
+                <p className="font-semibold v">Why Wait? Try Store Pickup</p>
+                <p className="text-sm md:text-xs">
+                  Buy online and find a store near you for pick up in less than
+                  2 hours. <span className="underline">Shop now.</span>
+                </p>
+              </div>
+            </SplideSlide>
+          </Splide>
+        </div>
+      )}
     </>
   );
 };
